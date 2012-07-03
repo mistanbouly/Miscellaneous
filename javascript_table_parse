@@ -1,0 +1,27 @@
+<table id="myTable">
+table script here
+</table>
+<script>
+
+
+ var pTable = document.getElementById('myTable');
+    //gets table
+
+    var rowLength = pTable.rows.length;
+    // //gets rows of table
+    // use i = 1 if you dont want to include the heading row
+
+    for (i = 0; i < rowLength; i++){
+    //loops through rows
+
+       var pCells = pTable.rows.item(i).cells;
+       //gets cells of current row
+       var cellLength = pCells.length;
+           for(var j = 0; j < cellLength; j++){
+           //loops through each cell in current row
+
+              var cellVal = pCells.item(j).innerHTML;
+              console.log(cellVal);
+           }
+    }
+</script>
